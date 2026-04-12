@@ -192,3 +192,44 @@ window.addEventListener("load", () => {
   });
 
 });
+
+const progressBar = document.getElementById("scroll-progress");
+
+window.addEventListener("scroll", () => {
+  const scrollTop = document.documentElement.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+  const scrolled = (scrollTop / scrollHeight) * 100;
+
+  progressBar.style.width = scrolled + "%";
+});
+
+
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  const circle = document.querySelector(".scroll-circle circle.progress");
+  const percentText = document.getElementById("scroll-percent");
+
+  const radius = 30;
+  const circumference = 2 * Math.PI * radius;
+
+  circle.style.strokeDasharray = circumference;
+
+  function updateScroll() {
+    const scrollTop = document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    const scrollPercent = (scrollTop / scrollHeight) * 100;
+
+    const offset = circumference - (scrollPercent / 100) * circumference;
+
+    circle.style.strokeDashoffset = offset;
+    percentText.textContent = Math.round(scrollPercent) + "%";
+  }
+
+  window.addEventListener("scroll", updateScroll);
+  updateScroll(); // run once on load
+});
+
+

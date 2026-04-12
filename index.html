@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Azeem.t</title>
+  <link rel="icon" type="image/png" href="./png/Modern AZ logo with gradient design.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./Azm.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+
+
+    /* 🔥 Glass Navbar */
+    .navbar {
+      backdrop-filter: blur(12px);
+      background: rgba(0, 0, 0, 0.6);
+      transition: 0.3s ease;
+      opacity: ;
+    }
+
+    /* Scroll effect */
+    .navbar.scrolled {
+      background: rgba(15, 23, 42, 0.95);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #38bdf8 !important;
+      letter-spacing: 1px;
+    }
+
+    /* Nav links */
+    .nav-link {
+      color: #e2e8f0 !important;
+      margin: 0 10px;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    /* Underline hover animation */
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #38bdf8;
+      left: 0;
+      bottom: 0;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-link:hover {
+      color: #38bdf8 !important;
+    }
+
+    /* 🔥 Gradient Button */
+    .btn-custom {
+      background: linear-gradient(45deg, #38bdf8, #6366f1);
+      border: none;
+      color: white;
+      border-radius: 25px;
+      padding: 6px 18px;
+      transition: 0.3s;
+    }
+
+    .btn-custom:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #38bdf8;
+    }
+    .bg-video{
+            opacity: 0.2;
+
+        }
+        .bg-video:-webkit-media-controls
+        {
+            display: none !important;
+        }
+        .bg-video::-webkit-media-controls
+        {
+            display: none !important;
+        }
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  /* opacity: 0.7; */
+}
+
+  </style>
+</head>
+
+
+
+<!-- 🔥 INSANE LOADER -->
+<div id="loader">
+
+  <!-- VIDEO BG -->
+  <video autoplay muted loop playsinline class="loader-video">
+    <source src="./video/loading.mp4" type="video/mp4">
+  </video>
+
+  <!-- CONTENT -->
+  <div class="loader-content">
+
+    <h1 class="loader-logo">Azeem.t</h1>
+
+    <!-- % COUNTER -->
+    <h2 id="loader-count">0%</h2>
+
+    <!-- BAR -->
+    <div class="loader-bar">
+      <div class="loader-fill"></div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<body>
+
+<!-- <video disablepictureinpicture autoplay muted loop controls id="bg-video" class="bg-video">
+            <source src="./video/abstrt.mp4" type="video/mp4">
+</video>   -->
+<a href="https://wa.me/917012558131" target="_blank" class="whatsapp-btn">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+
+
+
+<div class="animated-bg"></div>
+<!-- 🔥 NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container d-flex justify-content-between align-items-center">
+
+    <!-- LEFT SIDE (LOGO + NAME) -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <img src="./png/Modern AZ logo with gradient design.png" alt="Logo" class="nav-logo">
+      <span>Azeem.t</span>
+    </a>
+
+    <!-- TOGGLER -->
+    <button class="navbar-toggler bg-light" type="button"
+      data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- RIGHT SIDE MENU -->
+    <div class="collapse navbar-collapse justify-content-end" id="nav">
+      <ul class="navbar-nav align-items-center">
+
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+        <li class="nav-item ms-3">
+          <a class="btn btn-custom" href="#game">Play Game</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav><div></div>
+
+<section id="home" class="hero-section">
+  <!-- VIDEO BACKGROUND (ONLY FOR ABOUT) -->
+  <video autoplay muted loop playsinline class="about-video" disablepictureinpicture>
+  <source src="./video/abstrt.mp4" type="video/mp4">
+</video>
+
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6 col-md-12">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Hi, I'm <span class="text-primary">Azeem Tharuvara</span></h1>
+                        <h2 class="hero-subtitle">Intern at Bridgeon</h2>
+                        <p class="hero-description">
+                            I'm a Intern at Bridgeon focused on HTML & Python. Balancing my Bsc.CS studies with hands-on web development, creating scalable applications with modern best practices.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary btn-lg me-3">View My Work</a>
+                            <a href="#contact" class="btn btn-outline-primary btn-lg">Get In Touch</a>
+                        </div>
+                        <div class="social-links mt-4">
+                            <a href="https://www.linkedin.com/in/azeem-t/" class="social-link me-3" aria-label="LinkedIn">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/azeeemeee" class="social-link me-3" aria-label="GitHub">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://x.com/AzeemTharuvara" class="social-link" aria-label="X">
+                                 <svg viewBox="0 0 24 24" fill="currentColor">
+                                  <path d="M18.244 2H21l-6.56 7.5L22 22h-6.828l-5.35-6.993L3.5 22H1l7.05-8.05L2 2h6.828l4.85 6.342L18.244 2Zm-1.2 18h1.8L7.1 4H5.2l11.844 16Z"/>
+                              </svg>
+                            </a>
+
+                          </a>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- IMAGE -->
+                     <div class="col-lg-6 col-md-12">
+                     <div class="hero-image frame">
+                    <img src="./png/lama-10.jpg" class="hero-profile-img" alt="Azeem">
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+</section>  
+    
+        
+
+
+
+  
+<section id="about" class="about-section fade-section">
+
+  <!-- VIDEO BACKGROUND (ONLY FOR ABOUT) -->
+  <video autoplay muted loop playsinline class="about-video" disablepictureinpicture>
+  <source src="./video/abstr 2.mp4" type="video/mp4">
+</video>
+
+  <!-- CONTENT OVER VIDEO -->
+  <div class="container about-overlay">
+    <div class="row align-items-center">
+
+      <!-- IMAGE -->
+      <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+        <div class="about-image">
+          <img src="./png/goat.jpg" alt="Azeem" class="about-img hero-profile-img">
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="col-lg-7 col-md-12">
+
+        <div class="about-content hero-content">
+          <h2 class="about-title">About Me</h2>
+
+          <p class="about-text">
+            I'm Azeem, an aspiring developer passionate about web development and programming.
+            Currently pursuing BSc Computer Science while gaining real-world experience.
+          </p>
+
+          <p class="about-text">
+            I enjoy building modern UI, learning new technologies, and turning ideas into real applications.
+          </p>
+
+          <div class="about-skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+          </div>
+        </div>
+
+        <!-- INFO BOX -->
+        <div class="row mt-4 hero-content">
+          <div class="col-md-6 col-sm-12">
+            <ul class="about-info">
+              <li><strong>Age:</strong> 20 years</li>
+              <li><strong>Location:</strong> Kerala, India</li>
+              <li><strong>Email:</strong> azeemtharuvara@gmail.com</li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-sm-12">
+            <ul class="about-info">
+              <li><strong>Phone:</strong> +91 7012558131</li>
+              <li><strong>Freelance:</strong> Available</li>
+              <li><strong>Languages:</strong> English,Malayalam</li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+<section id="projects" class="projects-section fade-section">
+
+  <!-- 🎥 BACKGROUND VIDEO -->
+  <video autoplay muted loop playsinline class="projects-video">
+    <source src="./video/abstrt.mp4" type="video/mp4">
+  </video>
+
+  <div class="container projects-overlay text-center">
+
+    <h1 class="mb-4">My Projects</h1>
+    <p>Here are some of my works 🚀</p>
+
+    <!-- 🔥 ROW FIXED -->
+    <div class="row mt-5 g-4 justify-content-center">
+
+      <!-- 🔥 PROJECT 1 (IMAGE) -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <a href="http://127.0.0.1:5500/Day%2010/Azm.html#projects" target="_blank" class="project-link">
+          <div class="project-card">
+
+           <video class="project-video" autoplay muted loop playsinline disablepictureinpicture>
+            <source src="./video/portofolio back.mp4" type="video/mp4">
+          </video>
+
+            <h4 class="mt-3">Portfolio Website</h4>
+            <p>Click to view project</p>
+
+          </div>
+        </a>
+      </div>
+
+      <!-- 🔥 PROJECT 2 (VIDEO) -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="project-card">
+
+          <video class="project-video" autoplay muted loop playsinline disablepictureinpicture>
+            <source src="./video/coming soon.mp4" type="video/mp4">
+          </video>
+
+          <h4 class="mt-3">Project </h4>
+          <p>Coming Soon!</p>
+
+        </div>
+      </div>
+
+      <!-- 🔥 PROJECT 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="project-card">
+
+          <video class="project-video" autoplay muted loop playsinline disablepictureinpicture>
+            <source src="./video/coming soon.mp4" type="video/mp4">
+          </video>
+
+          <h4 class="mt-3">Project </h4>
+          <p>Coming Soon!</p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section id="skills" class="skills-section fade-section">
+
+  <!-- 🎥 BACKGROUND VIDEO -->
+  <video disablepictureinpicture autoplay muted loop playsinline class="skills-video">
+    <source src="./video/abstrt.mp4" type="video/mp4">
+  </video>
+
+  <div class="container skills-overlay text-center">
+
+    <h1 class="mb-4">My Skills</h1>
+    <p class="mb-5">What I know 🚀</p>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- 🔥 SKILL BOX -->
+      <div class="col-lg-6 col-md-10">
+        <div class="skill-box">
+
+          <!-- HTML -->
+          <div class="skill">
+            <div class="skill-top">
+              <span>HTML</span>
+              <span>75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="75%"></div>
+            </div>
+          </div>
+
+          <!-- CSS -->
+          <div class="skill">
+            <div class="skill-top">
+              <span>CSS</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="70%"></div>
+            </div>
+          </div>
+
+          <!-- JS -->
+          <div class="skill">
+            <div class="skill-top">
+              <span>JavaScript</span>
+              <span>50%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="50%"></div>
+            </div>
+          </div>
+
+          <!-- PYTHON -->
+          <div class="skill">
+            <div class="skill-top">
+              <span>Python</span>
+              <span>50%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="50%"></div>
+            </div>
+          </div>
+
+         
+
+  </div>
+</section>
+
+
+
+
+<section id="contact" class="contact-section fade-section">
+
+  <!-- 🎥 BACKGROUND VIDEO -->
+  <video autoplay muted loop playsinline class="contact-video">
+    <source src="./video/abstr 2.mp4" type="video/mp4">
+  </video>
+
+  <div class="container contact-overlay text-center">
+
+    <h2 class="mb-4">Contact Me</h2>
+    <p class="mb-5">Let’s work together 🚀</p>
+
+    <div class="row justify-content-center align-items-center">
+
+      <div class="col-lg-6 col-md-10 mx-auto">
+        <div class="contact-box">
+
+         <form id="contact-form">
+
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+  <button type="submit" class="btn btn-primary w-100">
+    Send Message
+  </button>
+
+</form>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 🔥 SOCIAL LINKS -->
+    <div class="contact-social mt-5">
+
+      <a href="https://www.linkedin.com/in/azeem-t/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/azeeemeee" target="_blank">GitHub</a>
+      <a href="https://x.com/AzeemTharuvara" target="_blank">X</a>
+      <a href="https://www.instagram.com/azeeemeee/">Instagram</a>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section id="game" class="game-section fade-section">
+
+  <h2>Mini Game 🎮</h2>
+  <p>Catch the glowing box as fast as you can!</p>
+
+  <div class="game-box">
+    <div id="target"></div>
+  </div>
+
+  <h3>Score: <span id="score">0</span></h3>
+
+</section>
+
+
+
+
+
+
+<footer class="footer glass-footer">
+
+  <div class="footer-container">
+
+    <!-- QUICK LINKS -->
+    <div class="footer-links">
+      <a href="#home" class="nav-active">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/azeem-t/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/azeeemeee" target="_blank">GitHub</a>
+      <a href="https://x.com/AzeemTharuvara" target="_blank">X</a>
+    </div>
+
+    <p class="footer-text">
+      © 2026 Azeem T. All Rights Reserved.
+    </p>
+
+  </div>
+
+  <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+</footer>
+
+
+
+
+
+
+<div class="mouse-bg"></div>
+
+<!-- Bootstrap JS -->
+ <script src="./Azm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<!-- 🔥 Scroll Effect Script -->
+<script>
+  window.addEventListener("scroll", function() {
+    let navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  emailjs.init("tyORTJdB1qLspVN5B"); // 👈 put your REAL public key here
+</script>
+
+
+
+
+</body>
+</html>

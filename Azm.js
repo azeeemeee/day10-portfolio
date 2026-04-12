@@ -1,56 +1,75 @@
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
+  const count = document.getElementById("loader-count");
+  const fill = document.querySelector(".loader-fill");
 
-  let images = document.images;
-  let videos = document.querySelectorAll("video");
+  const images = Array.from(document.images);
+  const videos = Array.from(document.querySelectorAll("video"));
 
-  let totalAssets = images.length + videos.length;
-  let loadedAssets = 0;
+  const assets = [...images, ...videos];
+  const total = assets.length;
 
-  function assetLoaded() {
-    loadedAssets++;
+  let loaded = 0;
+  let progress = 0;      // real progress
+  let display = 0;       // shown progress (smooth)
 
-    if (loadedAssets >= totalAssets) {
-      finishLoading();
+  // 🔥 Smooth animation loop
+  function animate() {
+    display += (progress - display) * 0.08; // easing
+
+    const shown = Math.floor(display);
+
+    count.textContent = shown + "%";
+    fill.style.width = shown + "%";
+
+    if (display < 100) {
+      requestAnimationFrame(animate);
+    } else {
+      setTimeout(() => {
+        loader.style.opacity = "0";
+        loader.style.transition = "0.6s ease";
+
+        setTimeout(() => {
+          loader.style.display = "none";
+        }, 600);
+      }, 300);
     }
   }
 
+  function updateProgress() {
+    loaded++;
+    progress = Math.floor((loaded / total) * 100);
+  }
+
   // If no assets
-  if (totalAssets === 0) {
-    finishLoading();
+  if (total === 0) {
+    progress = 100;
+    animate();
     return;
   }
 
   // Track images
-  for (let img of images) {
+  images.forEach(img => {
     if (img.complete) {
-      assetLoaded();
+      updateProgress();
     } else {
-      img.addEventListener("load", assetLoaded);
-      img.addEventListener("error", assetLoaded);
+      img.addEventListener("load", updateProgress);
+      img.addEventListener("error", updateProgress);
     }
-  }
+  });
 
   // Track videos
-  for (let video of videos) {
+  videos.forEach(video => {
     if (video.readyState >= 3) {
-      assetLoaded();
+      updateProgress();
     } else {
-      video.addEventListener("loadeddata", assetLoaded);
-      video.addEventListener("error", assetLoaded);
+      video.addEventListener("loadeddata", updateProgress);
+      video.addEventListener("canplaythrough", updateProgress);
+      video.addEventListener("error", updateProgress);
     }
-  }
+  });
 
-  function finishLoading() {
-    setTimeout(() => {
-      loader.classList.add("fade-out");
-
-      setTimeout(() => {
-        loader.style.display = "none";
-      }, 800);
-
-    }, 500); // small cinematic delay
-  }
+  animate();
 });
 
 

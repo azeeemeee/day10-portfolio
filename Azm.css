@@ -1656,3 +1656,63 @@ a, button, input, textarea, select {
     filter: brightness(1.3);
   }
 }
+
+
+.game-section {
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+/* Space background layer */
+.space-bg {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(white 1px, transparent 1px),
+              radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px, 100px 100px;
+  background-position: 0 0, 25px 25px;
+  animation: moveStars 60s linear infinite;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+/* Move effect */
+@keyframes moveStars {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-500px, -500px);
+  }
+}
+
+/* Keep content above background */
+.game-section h2,
+.game-section p,
+.game-section .game-box,
+.game-section h3 {
+  position: relative;
+  z-index: 1;
+}
+#target {
+  width: 40px;
+  height: 40px;
+  background: cyan;
+  border-radius: 8px;
+  box-shadow: 0 0 20px cyan, 0 0 40px blue;
+}
+
+.contact-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 500px;
+  margin: 0 auto 40px;
+}

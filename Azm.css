@@ -282,24 +282,7 @@
     0 0 80px rgba(56,189,248,0.6),
     0 0 120px rgba(99,102,241,0.4);
 }
-.mouse-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 
-  pointer-events: none;
-  z-index: -1;
-
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgba(56,189,248,0.15),
-    transparent 40%
-  );
-
-  transition: background 0.1s ease;
-}
 
 .hero-image {
   display: flex;
@@ -1262,6 +1245,65 @@ body {
 @keyframes floatTech {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-8px); }
+}
+
+
+
+/* 🌌 CINEMATIC TECH SECTION */
+.tech-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* 🌈 AURORA GRADIENT BACKGROUND */
+.tech-cinematic-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(56,189,248,0.25), transparent 40%),
+              radial-gradient(circle at 80% 30%, rgba(99,102,241,0.25), transparent 40%),
+              radial-gradient(circle at 50% 80%, rgba(34,197,94,0.15), transparent 50%);
+
+  filter: blur(40px);
+  animation: auroraMove 12s infinite alternate ease-in-out;
+  z-index: 0;
+}
+
+@keyframes auroraMove {
+  0% {
+    transform: scale(1) translateY(0px);
+  }
+  100% {
+    transform: scale(1.2) translateY(-30px);
+  }
+}
+
+/* 🧊 CONTENT ABOVE */
+.tech-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* 🎥 CANVAS PARTICLES */
+#tech-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+.tech-section::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(56,189,248,0.15), transparent 60%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.1s;
+  z-index: 1;
 }
 
 

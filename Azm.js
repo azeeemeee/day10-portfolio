@@ -1,32 +1,57 @@
-const loader = document.getElementById("loader");
-const count = document.getElementById("loader-count");
-const fill = document.querySelector(".loader-fill");
+window.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById("loader");
 
-let progress = 0;
-let speed = 1; // smaller = slower
+  let images = document.images;
+  let videos = document.querySelectorAll("video");
 
-let interval = setInterval(() => {
-  progress++;
+  let totalAssets = images.length + videos.length;
+  let loadedAssets = 0;
 
-  count.innerText = progress + "%";
-  fill.style.width = progress + "%";
+  function assetLoaded() {
+    loadedAssets++;
 
-  if (progress >= 100) {
-    clearInterval(interval);
+    if (loadedAssets >= totalAssets) {
+      finishLoading();
+    }
+  }
 
-    // 🔥 EXTRA DELAY so user actually sees it
+  // If no assets
+  if (totalAssets === 0) {
+    finishLoading();
+    return;
+  }
+
+  // Track images
+  for (let img of images) {
+    if (img.complete) {
+      assetLoaded();
+    } else {
+      img.addEventListener("load", assetLoaded);
+      img.addEventListener("error", assetLoaded);
+    }
+  }
+
+  // Track videos
+  for (let video of videos) {
+    if (video.readyState >= 3) {
+      assetLoaded();
+    } else {
+      video.addEventListener("loadeddata", assetLoaded);
+      video.addEventListener("error", assetLoaded);
+    }
+  }
+
+  function finishLoading() {
     setTimeout(() => {
       loader.classList.add("fade-out");
 
       setTimeout(() => {
         loader.style.display = "none";
       }, 800);
-      
 
-    }, 800); // pause at 100%
+    }, 500); // small cinematic delay
   }
-
-}, speed);
+});
 
 
 

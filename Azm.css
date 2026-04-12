@@ -1576,3 +1576,17 @@ a, button, input, textarea, select {
 }
 
 
+
+
+/* 🔥 HOVER ZOOM EFFECT */
+.project-thumb:hover video,
+.project-thumb:hover img {
+  transform: scale(1.15);
+}
+
+/* 🔥 CARD LIFT EFFECT */
+.project-thumb:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(56, 189, 248, 0.25);
+}
+

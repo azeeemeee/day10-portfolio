@@ -1134,12 +1134,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .scroll-circle svg {
   width: 70px;
   height: 70px;
   transform: rotate(-90deg);
+  background: transparent;
+  overflow: visible;
 }
 
 .scroll-circle circle {

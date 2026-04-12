@@ -318,3 +318,28 @@ document.addEventListener("mousedown", () => {
 document.addEventListener("mouseup", () => {
   document.body.style.cursor = "none";
 });
+
+
+
+
+const items = document.querySelectorAll(".project-thumb");
+const modal = document.getElementById("caseStudy");
+const closeBtn = document.querySelector(".close-btn");
+
+items.forEach(item => {
+  item.addEventListener("click", () => {
+    modal.classList.add("active");
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("active");
+  }
+});
+
+document.querySelectorAll(".project-item")

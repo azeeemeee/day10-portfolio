@@ -23,7 +23,7 @@
       backdrop-filter: blur(12px);
       background: rgba(0, 0, 0, 0.6);
       transition: 0.3s ease;
-      opacity: ;
+      
     }
 
     /* Scroll effect */
@@ -259,7 +259,7 @@
       <!-- IMAGE -->
       <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
         <div class="about-image">
-          <img src="./png/goat.jpg" alt="Azeem" class="about-img hero-profile-img">
+          <img src="./png/lama working.png" alt="Azeem" class="about-img hero-profile-img">
         </div>
       </div>
 
@@ -298,8 +298,8 @@
 
           <div class="col-md-6 col-sm-12">
             <ul class="about-info">
-              <li><strong>Phone:</strong> +91 7012558131</li>
-              <li><strong>Freelance:</strong> Available</li>
+              <li><strong>Phone:</strong> +91 70125 58131</li>
+              <li><strong>Freelance:</strong> Not-Available</li>
               <li><strong>Languages:</strong> English,Malayalam</li>
             </ul>
           </div>
@@ -326,54 +326,56 @@
 
     <!-- 🔥 ROW FIXED -->
     <div class="row mt-5 g-4 justify-content-center">
+<a href="https://azeemt.vercel.app/" target="_blank" class="project-link">
+  <div class="project-thumb">
 
-      <!-- 🔥 PROJECT 1 (IMAGE) -->
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <a href="https://azeemt.vercel.app/" target="_blank" class="project-link">
-          <div class="project-card">
+    <div class="media-box">
+      <video autoplay muted loop playsinline>
+        <source src="./video/Portofolio Back small.mp4">
+      </video>
+    </div>
 
-           <video class="project-video" autoplay muted loop playsinline disablepictureinpicture>
-            <source src="./video/Portofolio Back small.mp4" type="video/mp4">
-          </video>
-
-            <h4 class="mt-3">Portfolio Website</h4>
-            <p>Click to view project</p>
-
-          </div>
-        </a>
-      </div>
-
-      <!-- 🔥 PROJECT 2 (VIDEO) -->
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="project-card">
-
-          <video class="project-video" autoplay muted loop playsinline disablepictureinpicture>
-            <source src="./video/Coming Soon small.mp4" type="video/mp4">
-          </video>
-
-          <h4 class="mt-3">Project </h4>
-          <p>Coming Soon!</p>
-
-        </div>
-      </div>
-
-      <!-- 🔥 PROJECT 3 -->
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="project-card">
-
-          <video class="project-video" autoplay muted loop playsinline disablepictureinpicture>
-            <source src="./video/Coming Soon small.mp4" type="video/mp4">
-          </video>
-
-          <h4 class="mt-3">Project </h4>
-          <p>Coming Soon!</p>
-
-        </div>
-      </div>
-
+    <div class="project-overlay">
+      <h3>Portfolio Website</h3>
+      <p>UI / Frontend / Animation</p>
+      <span>View Case Study →</span>
     </div>
 
   </div>
+</a>
+
+<div class="project-item" data-project="2">
+
+  <div class="project-thumb">
+    <video autoplay muted loop playsinline>
+      <source src="./video/Coming Soon small.mp4">
+    </video>
+
+    <div class="project-overlay">
+      <h3>Coming Soon!</h3>
+      <p>UI / Frontend / Animation</p>
+      <span>View Case Study →</span>
+    </div>
+  </div>
+
+</div>
+
+      <!-- 🔥 PROJECT 3 -->
+<div class="project-item" data-project="3">
+
+  <div class="project-thumb">
+    <video autoplay muted loop playsinline>
+      <source src="./video/Coming Soon small.mp4">
+    </video>
+
+    <div class="project-overlay">
+      <h3>Coming Soon!</h3>
+      <p>UI / Frontend / Animation</p>
+      <span>View Case Study →</span>
+    </div>
+  </div>
+
+</div>
 </section>
 
 
@@ -640,7 +642,44 @@
 </div>
 
 
+<div id="caseStudy" class="case-study">
 
+  <div class="case-content">
+
+    <button class="close-btn">✕</button>
+
+    <h1>Portfolio Website</h1>
+
+    <p class="role">Role: Frontend Developer</p>
+
+    <video autoplay muted loop>
+      <source src="./video/Portofolio Back small.mp4">
+    </video>
+
+    <div class="case-grid">
+      <div>
+        <h3>Problem</h3>
+        <p>Old portfolio was basic and static.</p>
+      </div>
+
+      <div>
+        <h3>Solution</h3>
+        <p>Built cinematic UI with motion + interactions.</p>
+      </div>
+
+      <div>
+        <h3>Tech Stack</h3>
+        <p>HTML, CSS, JS, Bootstrap</p>
+      </div>
+    </div>
+
+    <a href="https://azeemt.vercel.app/" target="_blank" class="btn-live">
+      Live Demo
+    </a>
+
+  </div>
+
+</div>
 
 </body>
 </html>

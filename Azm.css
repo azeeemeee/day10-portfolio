@@ -1777,3 +1777,7 @@ a, button, input, textarea, select {
   transform: translateY(0);
   visibility: visible;
 }
+
+.about-video {
+  pointer-events: none; /* disables tapping */
+}

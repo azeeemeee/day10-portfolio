@@ -272,9 +272,9 @@
   transform: scale(1.05) rotate(1deg);
 
   box-shadow: 
-    0 0 40px rgba(56,189,248,0.8),
+    0 0 40px rgba(14, 14, 14, 0.8),
     0 0 80px rgba(56,189,248,0.6),
-    0 0 120px rgba(99,102,241,0.4);
+    0 0 120px rgba(17, 17, 17, 0.4);
 }
 
 /* GENERAL FIX */

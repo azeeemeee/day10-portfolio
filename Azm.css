@@ -204,7 +204,7 @@
   }
 }
 .btn-primary {
-  background: linear-gradient(45deg, #38bdf8, #6366f1);
+  background: linear-gradient(45deg, #282929, #666667);
   border: none;
   transition: 0.3s;
 }
@@ -216,7 +216,7 @@
 
 .btn-outline-primary {
   border: 1px solid #38bdf8;
-  color: #38bdf8;
+  color: #edf1f3;
 }
 
 .btn-outline-primary:hover {
@@ -2054,3 +2054,8 @@ section {
 .contact-grid {
   border: 2px solid red;
 }
+
+
+
+
+

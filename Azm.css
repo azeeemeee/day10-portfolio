@@ -25,14 +25,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #38bdf8;
+  color: #ffffff;
 }
 
 /* 🔥 LOGO ANIMATION */
 .loader-logo {
   font-size: 3rem;
   letter-spacing: 3px;
-  text-shadow: 0 0 30px #38bdf8;
+  text-shadow: 0 0 30px #ffffff;
   animation: logoZoom 2s ease infinite alternate;
 }
 
@@ -55,7 +55,7 @@
 .loader-fill {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  background: linear-gradient(90deg, #a0a2a2, #6366f1);
   transition: width 0.2s linear;
 }
 
@@ -87,7 +87,7 @@
     /* 🔥 Glass Navbar */
     .navbar {
       backdrop-filter: blur(12px);
-      background: rgba(15, 23, 42, 0.6);
+      background: rgba(34, 34, 34, 0.6);
       transition: 0.3s ease;
         padding-top: 20px;
         padding-bottom: 14px;
@@ -95,7 +95,7 @@
 
     /* Scroll effect */
     .navbar.scrolled {
-      background: rgba(15, 23, 42, 0.95);
+      background: rgba(30, 30, 31, 0.445);
       box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     }
 
@@ -223,57 +223,51 @@
   background: #38bdf8;
   color: #020617;
 }
-.hero-profile-img {
-  width: 380px;
-  height: 380px;
-  object-fit: cover;
-
-  border-radius: 50%;
-  border: 4px solid rgba(56,189,248,0.6);
-
-  box-shadow: 
-    0 0 50px rgba(56,189,248,0.5),
-    0 0 100px rgba(56,189,248,0.3);
-
-  transition: 0.4s;
-}
 .hero-section .row {
   justify-content: space-between;
 }
+
 .hero-image {
   display: flex;
   justify-content: center;
   align-items: center;
+  perspective: 1000px; /* 3D feel */
 }
+
 .container {
   max-width: 1200px;
 }
+
 .hero-content {
-  max-width: 800px;   /* increase from 450 → 600 */
-  padding: 50px;      /* more spacing inside */
+  max-width: 800px;
+  padding: 50px;
 }
 
 .hero-section {
-  /* avoid navbar overlap */
   min-height: 100vh;
-  align-items: center ;
+  align-items: center;
 }
+
+/* 🔥 SINGLE CLEAN IMAGE STYLE */
 .hero-profile-img {
-  width: 380px;
-  height: 380px;
+  width: 420px;
+  height: 420px;
   object-fit: cover;
 
-  border-radius: 10px; /* square with soft edges (change to 0 for sharp) */
+  border-radius: 20px;
 
-  transition: 0.4s ease;
+  /* ✅ TRANSPARENT (no background at all) */
+  background: transparent;
 
-  /* base glow */
+  /* ✨ GLOW FRAME */
   box-shadow: 
-    0 0 20px rgba(56,189,248,0.4),
-    0 0 40px rgba(56,189,248,0.2);
+    0 0 40px rgba(255, 255, 255, 0.4),
+    0 0 80px rgba(255, 255, 255, 0.2);
+
+  transition: transform 0.15s ease, box-shadow 0.3s ease;
 }
 
-/* 🔥 HOVER EFFECT */
+/* 🔥 HOVER EFFECT (UNCHANGED STYLE) */
 .hero-profile-img:hover {
   transform: scale(1.05) rotate(1deg);
 
@@ -283,28 +277,7 @@
     0 0 120px rgba(99,102,241,0.4);
 }
 
-
-.hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  perspective: 1000px; /* 🔥 gives 3D feel */
-}
-
-.hero-profile-img {
-  width: 420px;
-  height: 420px;
-  object-fit: cover;
-
-  border-radius: 20px;
-
-  transition: transform 0.1s ease-out;
-
-  box-shadow: 
-    0 0 40px rgba(56,189,248,0.4),
-    0 0 80px rgba(56,189,248,0.2);
-}
+/* GENERAL FIX */
 body {
   overflow-x: hidden;
 }
@@ -333,7 +306,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(15, 23, 42, 0.6);
+  background: rgba(15, 23, 42, 0);
   z-index: 0;
 }
 
@@ -361,105 +334,50 @@ section {
   scroll-margin-top: 80px;
 }
 
+/* RESET */
+section {
+  margin: 0;
+  padding: 0;
+}
+
+/* ABOUT */
 .about-overlay {
   min-height: 100vh;
   display: flex;
   align-items: center;
 }
-section {
-  margin: 0;
-  padding: 0;
-}
-.project-card {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 15px;
-  text-align: center;
 
-  max-width: 320px;
-  margin: auto;
+/* ========================= */
+/* 🎬 PROJECT SECTION */
+/* ========================= */
 
-  transition: 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 30px #38bdf8;
-}
-
-.project-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
-
-  transition: 0.4s;
-}
-
-.project-card:hover .project-img {
-  transform: scale(1.05);
-}
-.projects-section {
-  position: relative;
-  min-height: 100vh; /* 🔥 FULL SCREEN */
-  display: flex;
-  align-items: center; /* vertical center */
-  overflow: hidden;
-}
-
-/* VIDEO */
-.projects-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.3;
-  z-index: 0;
-}
-
-/* DARK OVERLAY */
-.projects-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(15, 23, 42, 0.7);
-  z-index: 1;
-}
-
-/* CONTENT */
-.projects-overlay {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-}
-/* SECTION */
 .projects-section {
   position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
+  padding: 100px 0;
 }
 
-/* VIDEO BACKGROUND */
+/* 🎥 VIDEO BACKGROUND */
 .projects-video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.3;
+
+  opacity: 0.35; /* balanced visibility */
   z-index: 0;
 }
 
-/* DARK OVERLAY */
+/* 🔲 DARK OVERLAY (neutral, no color tint) */
 .projects-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(15, 23, 42, 0.7);
+  background: rgba(0, 0, 0, 0.5); /* ✅ removed blue tone */
   z-index: 1;
 }
 
@@ -477,10 +395,14 @@ section {
   display: block;
 }
 
-/* CARD */
+/* ========================= */
+/* 🧊 PROJECT CARD */
+/* ========================= */
+
 .project-card {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.04); /* subtle glass */
+  /* ❌ REMOVED backdrop-filter (main issue) */
+
   padding: 20px;
   border-radius: 15px;
   text-align: center;
@@ -488,83 +410,29 @@ section {
   max-width: 320px;
   margin: auto;
 
-  transition: 0.3s;
+  transition: 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.08); /* clean edge */
 }
 
+/* ✨ HOVER (NO GLOW) */
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 30px #38bdf8;
+  transform: translateY(-8px);
 }
 
-/* IMAGE */
-.project-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
-
-  transition: 0.4s;
-}
-
-.project-card:hover .project-img {
-  transform: scale(1.05);
-}
-/* SECTION */
-.projects-section {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-  padding: 100px 0;
-}
-
-/* BACKGROUND VIDEO */
-.projects-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.25;
-  z-index: 0;
-}
-
-/* OVERLAY */
-.projects-overlay {
-  position: relative;
-  z-index: 2;
-}
-
-/* CARD */
-.project-card {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 15px;
-  transition: 0.3s;
-  max-width: 320px;
-  margin: auto;
-}
-
-/* HOVER */
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 30px #38bdf8;
-}
-
-/* IMAGE */
-.project-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* VIDEO */
+/* 🖼 IMAGE */
+.project-img,
 .project-video {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 10px;
+
+  transition: 0.4s ease;
+}
+
+/* IMAGE ZOOM ONLY */
+.project-card:hover .project-img {
+  transform: scale(1.05);
 }
 
 /* CLICK LINK */
@@ -572,6 +440,8 @@ section {
   text-decoration: none;
   color: white;
 }
+
+
 /* SOCIAL ICON BASE */
 .social-link {
   display: inline-flex;
@@ -730,7 +600,7 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(15, 23, 42, 0.7);
+  background: rgba(15, 42, 16, 0);
   z-index: 1;
 }
 
@@ -953,7 +823,7 @@ section {
   width: 55px;
   height: 55px;
 
-  background: #25D366;
+  background: #3f403f;
   color: white;
 
   border-radius: 50%;
@@ -1262,68 +1132,93 @@ body {
 
 
 
-/* 🌌 CINEMATIC TECH SECTION */
+
+
+/* 🔥 TECH SECTION BASE */
 .tech-section {
   position: relative;
-  overflow: hidden;
   min-height: 100vh;
+  background: #000000;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
 }
 
-/* 🌈 AURORA GRADIENT BACKGROUND */
-.tech-cinematic-bg {
+/* BACKGROUND WRAPPER */
+.tech-bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(56,189,248,0.25), transparent 40%),
-              radial-gradient(circle at 80% 30%, rgba(99,102,241,0.25), transparent 40%),
-              radial-gradient(circle at 50% 80%, rgba(34,197,94,0.15), transparent 50%);
-
-  filter: blur(40px);
-  animation: auroraMove 12s infinite alternate ease-in-out;
   z-index: 0;
 }
 
-@keyframes auroraMove {
-  0% {
-    transform: scale(1) translateY(0px);
-  }
-  100% {
-    transform: scale(1.2) translateY(-30px);
-  }
+/* 🧱 CYBER GRID */
+.tech-grid-bg {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  bottom: -50%;
+  left: -50%;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.76) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+
+  background-size: 60px 60px;
+
+  transform: perspective(900px) rotateX(65deg);
+  animation: techGridMove 20s linear infinite;
 }
 
-/* 🧊 CONTENT ABOVE */
+/* 📺 SCANLINES */
+.tech-scanlines {
+  position: absolute;
+  inset: 0;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.577) 0px,
+    rgba(255,255,255,0.03) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+}
+
+/* DARK OVERLAY */
+.tech-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.858);
+  z-index: 1;
+}
+
+/* CONTENT ABOVE */
 .tech-section .container {
   position: relative;
   z-index: 2;
 }
 
-/* 🎥 CANVAS PARTICLES */
-#tech-particles {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
+/* 🎬 GRID ANIMATION */
+@keyframes techGridMove {
+  from {
+    transform: perspective(900px) rotateX(65deg) translateY(0);
+  }
+  to {
+    transform: perspective(900px) rotateX(65deg) translateY(60px);
+  }
 }
 
 
-.tech-section::after {
-  content: "";
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(56,189,248,0.15), transparent 60%);
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: 0.1s;
-  z-index: 1;
-}
 
 
-/* hide default cursor */
-body {
-  cursor: none;
-}
+
+
+
+
+
+
+
 
 /* 🔵 inner dot */
 .cursor-dot {
@@ -1635,7 +1530,7 @@ a, button, input, textarea, select {
   text-transform: uppercase;
   letter-spacing: 3px;
 
-  background: linear-gradient(90deg, #38bdf8, #6366f1, #22c55e);
+  background: linear-gradient(90deg, #000000, #6366f1, #000000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -1778,6 +1673,384 @@ a, button, input, textarea, select {
   visibility: visible;
 }
 
-.about-video {
-  pointer-events: none; /* disables tapping */
+.flipper {
+  transform: scaleX(-1) rotate(180deg);
+}
+
+
+
+
+
+
+/* 🔥 SECTION BASE */
+.education-section {
+  position: relative;
+  overflow: hidden;
+  background: #000000;
+}
+
+/* 🎥 MOTION BACKGROUND WRAPPER */
+.education-motion-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* 🧱 GRID FLOOR (like your home section) */
+.edu-grid {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  bottom: -50%;
+  left: -50%;
+
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+
+  background-size: 60px 60px;
+
+  transform: perspective(800px) rotateX(65deg);
+  animation: gridMove 20s linear infinite;
+}
+
+
+
+/* 📦 CONTENT ABOVE BG */
+.education-overlay {
+  position: relative;
+  z-index: 2;
+}
+
+/* 🎬 ANIMATIONS */
+@keyframes gridMove {
+  from {
+    transform: perspective(800px) rotateX(65deg) translateY(0);
+  }
+  to {
+    transform: perspective(800px) rotateX(65deg) translateY(60px);
+  }
+}
+
+@keyframes floatGlow {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-40px) scale(1.1);
+  }
+}
+
+@keyframes beamMove {
+  0% {
+    transform: translateX(-100%) rotate(15deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(15deg);
+  }
+}
+
+/* RESET */
+section {
+  margin: 0;
+  padding: 0;
+}
+
+/* ========================= */
+/* 🎬 PROJECT SECTION */
+/* ========================= */
+/* 
+.projects-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 100px 0;
+  background: #020617;
+}
+
+/* 🔥 MOTION BACKGROUND */
+.projects-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 100px 0;
+  background: #000; /* pure black */
+}
+
+/* 🔥 MOTION BACKGROUND */
+.projects-motion-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* 🧱 FLIPPED GRID (BEAM FIXED) */
+.proj-grid {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;              /* ✅ FIXED (was -55%) */
+  left: -50%;
+
+  /* ⚪ WHITE GRID */
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+
+  background-size: 60px 60px;
+
+  /* 🔥 CLEAN PERSPECTIVE */
+  transform: perspective(1000px) rotateX(-60deg) translateY(-50%);
+  transform-origin: top;
+
+  animation: projGridMove 20s linear infinite;
+
+  /* ❌ REMOVE BEAM EFFECT */
+  mask-image: linear-gradient(to bottom, transparent 0%, black 30%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%);
+}
+
+/* ❌ REMOVED GLOW COMPLETELY (it caused fake lighting) */
+
+/* 🔲 DARK OVERLAY (neutral) */
+.projects-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* CONTENT */
+.projects-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* ========================= */
+/* 🧊 PROJECT CARD */
+/* ========================= */
+
+.project-card {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+
+  max-width: 420px;
+  margin: auto;
+
+  transition: 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+/* IMAGE */
+.project-img,
+.project-video {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.4s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.05);
+}
+
+/* 🎬 ANIMATION */
+@keyframes projGridMove {
+  from {
+    transform: perspective(1000px) rotateX(-60deg) translateY(-50%);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-60deg) translateY(-55%);
+  }
+}
+
+/* ========================= */
+/* 🎬 ANIMATIONS */
+/* ========================= */
+
+@keyframes projGridMove {
+  from {
+    transform: perspective(800px) rotateX(-65deg) translateY(0);
+  }
+  to {
+    transform: perspective(800px) rotateX(-65deg) translateY(-60px);
+  }
+}
+
+/* reuse same glow animation */
+@keyframes floatGlow {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-40px) scale(1.1);
+  }
+}
+
+
+/* 🎓 EDUCATION SECTION */
+.education-section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* 🎥 VIDEO */
+.education-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: 0.35; /* adjust if needed */
+  z-index: 0;
+}
+
+/* 🔲 DARK OVERLAY (IMPORTANT for readability) */
+.education-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* no color tint */
+  z-index: 1;
+}
+
+/* 📦 CONTENT */
+.education-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+
+
+
+
+
+#music-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 999;
+
+  backdrop-filter: blur(10px);
+}
+
+
+
+
+
+
+
+
+/* 🔥 CONTACT SECTION BASE */
+.contact-section {
+  position: relative;
+  min-height: 100vh;
+  background: #000;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🔥 BACKGROUND LAYER */
+.contact-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* 🧱 GRID */
+.contact-grid {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  bottom: -50%;
+  left: -50%;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px);
+
+  background-size: 60px 60px;
+
+  transform: perspective(900px) rotateX(65deg);
+  animation: gridMove 20s linear infinite;
+
+  z-index: 0;
+}
+
+/* 📺 SCANLINES */
+.contact-scanlines {
+  position: absolute;
+  inset: 0;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.03) 0px,
+    rgba(255,255,255,0.03) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+
+  pointer-events: none;
+}
+
+/* 🔲 DARK OVERLAY */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 1;
+}
+
+/* CONTENT ABOVE */
+.contact-overlay {
+  position: relative;
+  z-index: 2;
+}
+
+/* 🎬 ANIMATION */
+@keyframes gridMove {
+  from {
+    transform: perspective(800px) rotateX(65deg) translateY(0);
+  }
+  to {
+    transform: perspective(800px) rotateX(65deg) translateY(60px);
+  }
+}
+
+.contact-grid {
+  border: 2px solid red;
 }

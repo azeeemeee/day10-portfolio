@@ -904,73 +904,12 @@ section {
 /* =========================
    📱 MOBILE RESPONSIVE FIX
 ========================= */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 
-  /* HERO */
-  .hero-section .row {
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 0;
-  }
 
-  .hero-content {
-    padding: 20px;
-    max-width: 100%;
-  }
 
-  .hero-profile-img {
-    width: 250px;
-    height: 250px;
-  }
 
-  /* ABOUT */
-  .about-section .row {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  /* PROJECTS */
-  .project-card {
-    max-width: 100%;
-  }
-
-  .project-video {
-    height: 150px;
-  }
-
-  /* SKILLS */
-  .skill-box {
-    padding: 15px;
-  }
-
-  /* CONTACT */
-  .contact-box {
-    padding: 15px;
-  }
-
-  /* NAVBAR */
-  .navbar-brand {
-    font-size: 1.2rem;
-  }
-
-  .nav-logo {
-    width: 30px;
-    height: 30px;
-  }
-
-  /* TEXT SIZE FIX */
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  p {
-    font-size: 0.9rem;
-  }
-}
 
 html {
   scroll-behavior: smooth;

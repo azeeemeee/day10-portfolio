@@ -246,6 +246,7 @@
 .hero-section {
   min-height: 100vh;
   align-items: center;
+  overflow: hidden;
 }
 
 /* 🔥 SINGLE CLEAN IMAGE STYLE */
@@ -327,7 +328,7 @@ body {
 
 
 section {
-  min-height: ;100vh
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -909,6 +910,7 @@ section {
   .hero-section .row {
     flex-direction: column;
     text-align: center;
+    margin-bottom: 0;
   }
 
   .hero-content {

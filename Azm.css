@@ -245,6 +245,7 @@
 
 .hero-section {
   min-height: 100vh;
+  min-height: 100dvh;
   align-items: center;
   overflow: hidden;
 }
@@ -287,6 +288,7 @@ body {
 .about-section {
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
   overflow: hidden;
 }
 
@@ -344,6 +346,7 @@ section {
 /* ABOUT */
 .about-overlay {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
 }

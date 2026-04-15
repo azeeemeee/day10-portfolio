@@ -30,7 +30,7 @@
 
 /* 🔥 LOGO ANIMATION */
 .loader-logo {
-  font-size: 3rem;
+  font-size: 2rem;
   letter-spacing: 3px;
   text-shadow: 0 0 30px #ffffff;
   animation: logoZoom 2s ease infinite alternate;
@@ -71,6 +71,21 @@
   transition: opacity 0.8s ease;
   pointer-events: none;
 }
+.loader-logo-img {
+  width: 120px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 10px #fff);
+  animation: logoFloat 2.5s ease-in-out infinite;
+}
+
+/* smooth floating animation */
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+
+
 
 
 

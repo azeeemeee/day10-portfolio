@@ -378,9 +378,8 @@ items.forEach(item => {
   });
 });
 
-closeBtn.addEventListener("click", () => {
-  modal.classList.remove("active");
-});
+
+
 
 window.addEventListener("click", (e) => {
   if (e.target === modal) {
@@ -392,15 +391,15 @@ document.querySelectorAll(".project-item")
 
 
 
-localStorage.setItem("music", "on");
-music.volume = 0;
-let fade = setInterval(() => {
-  if (music.volume < 1) {
-    music.volume += 0.05;
-  } else {
-    clearInterval(fade);
-  }
-}, 100);
+// localStorage.setItem("music", "on");
+// music.volume = ;
+// let fade = setInterval(() => {
+//   if (music.volume < 1) {
+//     music.volume += 0.05;
+//   } else {
+//     clearInterval(fade);
+//   }
+// }, 100);
 
 
 

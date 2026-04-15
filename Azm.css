@@ -2003,3 +2003,150 @@ section {
 
 
 
+/* =============================================
+   📱 MOBILE RESPONSIVE FIX — paste at the
+   very bottom of your Azm.css file
+   ============================================= */
+
+@media (max-width: 768px) {
+
+  /* ── HERO SECTION ── */
+  .hero-section .row {
+    flex-direction: column-reverse; /* image on top, text below */
+    padding-top: 100px;             /* clear the navbar */
+    padding-bottom: 60px;
+  }
+
+  .hero-content {
+    max-width: 100% !important;
+    padding: 24px !important;
+    margin: 0 16px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  /* ── HERO IMAGE ── */
+  .hero-profile-img {
+    width: 220px !important;
+    height: 220px !important;
+    margin: 0 auto 24px;
+    display: block;
+  }
+
+  .hero-image {
+    margin-bottom: 16px;
+  }
+
+  /* ── ABOUT SECTION ── */
+  .about-overlay {
+    padding: 100px 16px 60px !important;
+    min-height: unset !important;
+  }
+
+  .about-img {
+    width: 200px !important;
+    height: 200px !important;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .about-content {
+    max-width: 100% !important;
+    padding: 20px !important;
+    margin-top: 24px;
+  }
+
+  /* ── EDUCATION TIMELINE ── */
+  .timeline-content {
+    padding: 16px;
+  }
+
+  /* ── PROJECTS ── */
+  .projects-section {
+    padding: 80px 0 60px;
+  }
+
+  .projects-title {
+    font-size: 2rem !important;
+    letter-spacing: 2px;
+  }
+
+  .project-thumb video {
+    height: 180px;
+  }
+
+  /* ── SKILLS ── */
+  .skill-box {
+    padding: 20px;
+  }
+
+  .skills-section h1 {
+    font-size: 2rem !important;
+    letter-spacing: 1px;
+  }
+
+  /* ── TECH STACK ── */
+  .tech-title {
+    font-size: 2rem !important;
+    letter-spacing: 1px;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px;
+  }
+
+  .tech-item {
+    width: 85px;
+    height: 85px;
+  }
+
+  .tech-item img {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* ── CONTACT ── */
+  .contact-title {
+    font-size: 1.8rem !important;
+  }
+
+  /* ── FOOTER ── */
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  /* ── SCROLL CIRCLE (move so it doesn't overlap WhatsApp btn) ── */
+  .scroll-circle {
+    right: 16px;
+    bottom: 80px;
+  }
+
+  /* ── HIDE CUSTOM CURSOR ON TOUCH SCREENS ── */
+  .cursor-dot,
+  .cursor-outline {
+    display: none !important;
+  }
+
+  * {
+    cursor: auto !important;
+  }
+
+  a, button, input, textarea {
+    cursor: auto !important;
+  }
+}

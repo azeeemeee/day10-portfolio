@@ -396,9 +396,9 @@ section {
   align-items: center;
 }
 
-/* ========================= */
+
 /* 🎬 PROJECT SECTION */
-/* ========================= */
+
 
 .projects-section {
   position: relative;
@@ -444,9 +444,9 @@ section {
   display: block;
 }
 
-/* ========================= */
+
 /* 🧊 PROJECT CARD */
-/* ========================= */
+
 
 .project-card {
   background: rgba(255, 255, 255, 0.04); /* subtle glass */
@@ -963,9 +963,9 @@ section {
 }
 
 
-/* =========================
-   📱 MOBILE RESPONSIVE FIX
-========================= */
+
+   /* 📱 MOBILE RESPONSIVE FIX */
+
 /* @media (max-width: 768px) {
 
 
@@ -1309,9 +1309,9 @@ a, button, input, textarea, select {
   transform: scale(1.1);
 }
 
-/* ===================== */
+
 /* CASE STUDY OVERLAY */
-/* ===================== */
+
 
 .case-study {
   position: fixed;
@@ -1760,9 +1760,8 @@ section {
   padding: 0;
 }
 
-/* ========================= */
 /* 🎬 PROJECT SECTION */
-/* ========================= */
+
 /* 
 .projects-section {
   position: relative;
@@ -1837,9 +1836,8 @@ section {
   width: 100%;
 }
 
-/* ========================= */
+
 /* 🧊 PROJECT CARD */
-/* ========================= */
 
 .project-card {
   background: rgba(255, 255, 255, 0.04);
@@ -2062,10 +2060,8 @@ section {
 
 
 
-/* =============================================
-   📱 MOBILE RESPONSIVE FIX — paste at the
-   very bottom of your Azm.css file
-   ============================================= */
+   /* 📱 MOBILE RESPONSIVE FIX  */
+
 
 @media (max-width: 768px) {
 

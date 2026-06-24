@@ -1,0 +1,14 @@
+{
+  "name": "day10-portfolio",
+  "version": "1.0.0",
+  "description": "Azeem's Portfolio Website",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "start": "npx serve ."
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  },
+  "type": "module"
+}
